@@ -2,7 +2,7 @@ package com.fju;
 
 import java.util.Scanner;
 
-//////這是衣服搜尋男生的尺寸給你的size系統，這件衣服的價錢，輸入胸圍、腰圍、身高會告訴你是S、M、L、XL的size和價位
+
 
 public class Tester {
     public static void main(String[] args) {
