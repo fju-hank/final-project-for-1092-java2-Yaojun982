@@ -21,28 +21,8 @@ public class SizeApp {
     private JPanel JPanel6;
     private JPanel JPanel1;
 
-    public SizeApp() {
-        button1.addActionListener(new ActionListener() {
-                Clothes[] clothes = {new Clothes1(), new Clothes2(),
-                        new Clothes3(), new Clothes4()};
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
 
-            }
-        });
-        textField1.addActionListener(new ActionListener() {
-            /**
-             * Invoked when an action occurs.
-             *
-             * @param e the event to be processed
-             */
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("SizeApp");
