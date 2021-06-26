@@ -4,9 +4,11 @@ com/fju/Clothes1.java
  com.fju.Clothes1
 com/fju/Clothes.java
  com.fju.Clothes
-com/fju/Clothes2.java
- com.fju.Clothes2
-com/fju/Clothes4.java
- com.fju.Clothes4
 com/fju/Tester.java
  com.fju.Tester
+com/fju/Clothes4.java
+ com.fju.Clothes4
+com/fju/Clothes2.java
+ com.fju.Clothes2
+com/fju/SizeApp.java
+ com.fju.SizeApp
