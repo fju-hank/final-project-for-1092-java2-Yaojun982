@@ -5,12 +5,22 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.NumberFormat;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+
+
+
 
 public class SizeApp {
     private JPanel JPanel0;
     private JButton button1;
-    private JButton closeButton;
+    private JButton shoppingButton;
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
@@ -19,16 +29,70 @@ public class SizeApp {
     private JPanel JPanel3;
     private JPanel JPanel4;
     private JPanel JPanel1;
+    private JButton compareYourSizeButton;
 
 
     public SizeApp() {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Object options[] = {"OK", "NO"};
+                Object options[] = {"OK", "Oh NO!"};
                 JOptionPane.showOptionDialog(null, "您的尺寸大小" + "\n" + "胸圍 : " + textField1.getText() + "\n" + "腰圍 : " + textField2.getText() + "\n" + "身高 : " + textField3.getText() + "\n" + "Size and Money", "SizeApp", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
                 JFormattedTextField intField = new JFormattedTextField(NumberFormat.getIntegerInstance());
                 intField.setFocusLostBehavior(JFormattedTextField.COMMIT);
+
+            }
+        });
+        shoppingButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        Desktop.getDesktop().browse(new URI("https://cloud.hakka.gov.tw/Pub/Opendata/DTST20161300102.json"));
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (URISyntaxException uriSyntaxException) {
+                        uriSyntaxException.printStackTrace();
+                    }
+
+                }
+
+        });
+        compareYourSizeButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                    try {
+                        FileReader fr = new FileReader("衣服尺寸量法.txt");
+
+                        BufferedReader br = new BufferedReader(fr);
+                        String content = "";
+                        while (br.ready()) {
+                            content = br.readLine();
+                            System.out.println(content);
+
+                        }
+
+                        FileWriter fw = new FileWriter("target.txt");
+                        fw.write(content);
+                        fw.flush();
+                        System.out.println("success");
+                        fr.close();
+                        fw.close();
+                    } catch (Exception a) {
+                        System.out.println("failure");
+                    }
+
 
             }
         });

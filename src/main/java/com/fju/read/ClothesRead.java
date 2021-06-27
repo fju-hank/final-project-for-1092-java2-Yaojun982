@@ -1,7 +1,9 @@
 package com.fju.read;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+
 public class ClothesRead {
     public static void main(String[] args) {
         try {
