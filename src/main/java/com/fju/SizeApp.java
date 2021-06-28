@@ -12,7 +12,7 @@ import java.text.NumberFormat;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-
+import java.util.Scanner;
 
 
 
@@ -35,15 +35,43 @@ public class SizeApp {
 
     public SizeApp() {
         button1.addActionListener(new ActionListener() {
+           // Clothes[] clothes = {new Clothes1(), new Clothes2(),
+             //       new Clothes3(), new Clothes4()};
 
-
-
+          //  int length = Integer.parseInt(textField1.getText());
+            //int width = Integer.parseInt(textField2.getText());
+            //int height = Integer.parseInt(textField3.getText());
 
             @Override
             public void actionPerformed(ActionEvent e) {
                 Object options[] = {"OK"};
                 JOptionPane.showOptionDialog(null, "您的尺寸大小" + "\n" + "胸圍 : " + textField1.getText() + "\n" + "腰圍 : " + textField2.getText() + "\n" + "身高 : " + textField3.getText() + "\n"
                         + "Size and Money", "SizeApp", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+                try {
+
+                    FileReader reader = new FileReader("尺寸金額.txt");
+
+
+                    char[] buffer = new char[1024];
+
+                    StringBuffer result = new StringBuffer();
+
+                    int len;
+
+                    while((len = reader.read(buffer)) != -1) {
+                        result.append(buffer,0,len);
+                    }
+
+                    reader.close();
+
+                    //更新文本顯示區內容
+                    textArea1.setText(result.toString());
+
+                    System.out.println("讀檔成功");
+                }  catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 
 
 

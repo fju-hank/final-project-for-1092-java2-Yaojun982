@@ -7,7 +7,7 @@ import java.io.FileWriter;
 public class ClothesRead {
     public static void main(String[] args) {
         try {
-            FileReader fr = new FileReader("衣服尺寸量法.txt");
+            FileReader fr = new FileReader("尺寸金額.txt");
 
             BufferedReader br = new BufferedReader(fr);
             String content = "";

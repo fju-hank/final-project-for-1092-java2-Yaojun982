@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-public class Tester {
+public class Tester extends SizeApp {
     public static void main(String[] args) {
         Clothes[] clothes = {new Clothes1(), new Clothes2(),
                 new Clothes3(), new Clothes4()};

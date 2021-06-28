@@ -1,6 +1,6 @@
 package com.fju;
 
-public abstract class  Clothes {
+public abstract class  Clothes extends SizeApp {
     int length;
     int width;
     int height;
