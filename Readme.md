@@ -11,5 +11,5 @@
 ## 進度
 (上面預計要打的)
 在gui的介面中能輸入胸圍、腰圍身高、按gosizes能抓取打的數字，按compare your size  
-tester會顯示怎麼量你的身材的文字檔，按shopping能跳進那個衣飾的網頁。
+方框會顯示衣服尺寸量法，Tester會顯示讀檔成功，按shopping能跳進那個衣飾的網頁。
 剩下功能研究中
