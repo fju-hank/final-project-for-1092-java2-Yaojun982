@@ -8,9 +8,10 @@
  執行程式為 com.fju.Tester，
  從GUI輸入胸圍、腰圍、身高點選執行後跑出
  並顯示金額及尺寸。
+ 按compare your size方框會教你衣服的尺寸量法
+ 按shopping能跳進那個衣飾的網頁。
 
 ## 進度
-(預計要打的)
 在gui的介面中能輸入胸圍、腰圍身高、按gosizes能抓取打的數字
 ,可跟下方文字框比對尺寸及金額，按compare your size  
 方框會顯示衣服尺寸量法，Tester會顯示讀檔成功，按shopping能跳進那個衣飾的網頁。
